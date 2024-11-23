@@ -1,12 +1,14 @@
 pandas
 streamlit
-matpolit
-
-   note: This error originates from a subprocess, and is likely not a problem with pip.
-  ERROR: Failed building wheel for pillow
-Successfully built pandas
-Failed to build pillow
-ERROR: Could not build wheels for pillow, which is required to install pyproject.toml-based projects
-[notice] A new release of pip is available: 24.0 -> 24.3.1
-[notice] To update, run: pip install --upgrade pip
-Checking if Streamlit is installed
+numpy 
+matplotlib
+seaborn 
+matplotlib.dates
+geopandas 
+matplotlib.colors 
+statsmodels.api
+plotly.express 
+plotly.graph_objects
+scipy.stats 
+pickle
+prophet
