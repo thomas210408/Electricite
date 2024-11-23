@@ -1,0 +1,33 @@
+Nom de la colonne,Description
+column_30,colonne superflue dûe au fichier CSV mal arrêté
+date_heure,"Combinaison de la date et de l'heure, souvent utilisée pour faciliter les analyses temporelles."
+date,Date à laquelle les données ont été enregistrées.
+pompage,"Énergie utilisée pour le pompage de l'eau dans les installations hydroélectriques, mesurée en mégawatts."
+heure,Heure spécifique de l'enregistrement des données.
+code_insee_region,"Identifiant numérique spécifique à chaque région en France, utilisé pour les analyses statistiques et administratives."
+ech_physiques,"Le solde des échanges avec les régions limitrophes, mesurés en mégawatts."
+tch_eolien,le taux de charge de l'éolien représente son volume de production par rapport à la capacité de production installée et en service de l'éolien
+tch_hydraulique,le taux de charge de l'hydraulique représente son volume de production par rapport à la capacité de production installée et en service de l'hydraulique
+tch_bioenergies,le taux de charge des bioenenergies. représente son volume de production par rapport à la capacité de production installée et en service des bioenenergies.
+tch_nucleaire,le taux de charge du nucléaire représente son volume de production par rapport à la capacité de production installée et en service du nucléaire
+tch_solaire,le taux de charge du solaire représente son volume de production par rapport à la capacité de production installée et en service du solaire
+tch_thermique,le taux de charge du thermique représente son volume de production par rapport à la capacité de production installée et en service du thermique
+tco_eolien,le taux de couverture de l'éolien. Cela représente la part de l'éolien dans la consommation de cette région
+tco_hydraulique,le taux de couverture de l'hydraulique. Cela représente la part de l'hydraulique dans la consommation de cette région
+tco_bioenergies,le taux de couverture des bioenenergies. Cela représente la part des bioenenergies dans la consommation de cette région
+tco_nucleaire,le taux de couverture du nucléaire. Cela représente la part du nucléaire dans la consommation de cette région
+tco_solaire,le taux de couverture du solaire. Cela représente la part du solaire dans la consommation de cette région
+tco_thermique,le taux de couverture du thermique. Cela représente la part du thermique dans la consommation de cette région
+libelle_region,Nom de la région en France où les données sont collectées.
+solaire,Production d'énergie à partir de panneaux solaires mesurée en mégawatts.
+bioenergies,Production d'énergie à partir de sources biologiques ou de déchets mesurée en mégawatts.
+hydraulique,Production d'énergie à partir de sources hydrauliques (eau) mesurée en mégawatts.
+nucleaire,Production d'énergie à partir de sources nucléaires mesurée en mégawatts.
+thermique,Production d'énergie à partir de sources thermiques (utilisant des combustibles fossiles ou autres) mesurée en mégawatts.
+eolien,Production d'énergie à partir de turbines éoliennes mesurée en mégawatts.
+eolien_offshore,Production d'énergie éolienne en mer.
+eolien_terrestre,Production d'énergie éolienne sur terre.
+destockage_batterie,Quantité d'énergie libérée à partir du stockage de batteries au cours de la période spécifiée.
+stockage_batterie,Quantité d'énergie stockée dans les batteries au cours de la période spécifiée.
+consommation,Quantité totale d'électricité consommée mesurée en mégawatts (MW)
+nature,"Type de données collectées, par exemple, données préliminaires ou données définitives."
