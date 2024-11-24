@@ -497,12 +497,12 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
   df_year = df[df['date_heure'].dt.year == selected_year].copy()
 
 
-  consommation_par_mois = df_year.groupby(df_year['date_heure'].dt.to_period('M'))['consommation'].sum().reset_index()
+  consommation_par_mois = df_year.groupby(df_year['date_heure'].dt.to_period('ME'))['consommation'].sum().reset_index()
   consommation_par_mois.columns = ['mois', 'consommation_totale']
 
 
   df_year['production_totale'] = df_year[production_columns].sum(axis=1)
-  production_par_mois = df_year.groupby(df_year['date_heure'].dt.to_period('M'))['production_totale'].sum().reset_index()
+  production_par_mois = df_year.groupby(df_year['date_heure'].dt.to_period('ME'))['production_totale'].sum().reset_index()
   production_par_mois.columns = ['mois', 'production_totale']
 
 
