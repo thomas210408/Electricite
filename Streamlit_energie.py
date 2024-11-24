@@ -360,7 +360,7 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
       df_filtered = df[(df.index.year >= 2018) & (df.index.year <= 2022)]
 
 
-  consommation_mensuelle = df_filtered['consommation'].resample('ME').mean()
+  consommation_mensuelle = df_filtered['consommation'].resample('M').mean()
 
 
   st.write(f"### Consommation Moyenne d'Énergie par Mois ({periode})")
