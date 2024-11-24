@@ -360,7 +360,7 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
       df_filtered = df[(df.index.year >= 2018) & (df.index.year <= 2022)]
 
 
-  consommation_mensuelle = df_filtered['consommation'].resample('M').mean()
+  consommation_mensuelle = df_filtered['consommation'].resample('ME').mean()
 
 
   st.write(f"### Consommation Moyenne d'Énergie par Mois ({periode})")
@@ -427,7 +427,7 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
 
 
 
-  df['date_heure'] = pd.to_datetime(df['date_heure'], errors='coerce')
+  df['date_heure'] = pd.to_datetime(df['date_heure'],format='%Y-%ME-%d',errors='coerce')
   df['consommation'] = pd.to_numeric(df['consommation'], errors='coerce')
 
 
