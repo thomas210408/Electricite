@@ -1401,7 +1401,7 @@ if page == pages[3] :
 
     st.subheader("Identification des Paramètres du Modèle (ACF et PACF)")
   
-    st.write("""Les graphiques d'autocorrélation (ACF) et d'autocorrélation partielle (PACF) permettent d'identifier les paramètres \( p \), \( d \), \( q \) (pour ARIMA) ainsi que les paramètres saisonniers \( P \), \( D \), \( Q \) pour SARIMA.""")
+    st.write("""Les graphiques d'autocorrélation (ACF) et d'autocorrélation partielle (PACF) permettent d'identifier les paramètres ( p ), ( d ), ( q ) (pour ARIMA) ainsi que les paramètres saisonniers ( P ), ( D ), ( Q ) pour SARIMA.""")
 
     st.write("La décroissance progressive de l'ACF et les pics dans le PACF suggèrent l'utilisation d'un modèle SARIMA (1,1,1)(0,1,1)[12].")
 
