@@ -3,9 +3,12 @@ streamlit
 numpy 
 matplotlib
 seaborn 
+matplotlib-dates
+matplotlib-colors
+shapely
 geopandas 
 statsmodels
 plotly
 scipy
 prophet
-sklearn
+scikit-learn
