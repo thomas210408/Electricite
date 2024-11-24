@@ -832,7 +832,7 @@ if page == pages[3] :
 
   filtered_data = df.loc[df['libelle_region'] ==  selection_region]
 
-  filtered_data['date'] = pd.to_datetime(filtered_data['date'])
+  filtered_data['date'] = pd.to_datetime(filtered_data['date'],format='%Y-%ME-%d')
 
   sarima_data=filtered_data.groupby(pd.Grouper(key='date', freq='M'))['consommation'].mean()
    
