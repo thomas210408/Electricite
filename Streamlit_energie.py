@@ -344,7 +344,7 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
   
   
 
-  df['date_heure'] = pd.to_datetime(df['date_heure'], errors='coerce')
+  df['date_heure'] = pd.to_datetime(df['date_heure'],format='%Y-%ME-%d', errors='coerce')
   df.set_index('date', inplace=True)
 
 
