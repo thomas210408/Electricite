@@ -537,11 +537,15 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
   st.write ("### Cartographie de la Consommation ou de la Production Électrique par Région en France")
   
 
-  gdf = gpd.read_file('regions-20180101.shp') 
+ # gdf = gpd.read_file('regions-20180101.shp') 
+  gdf=pd.read_csv('gdf_2.csv') 
 
 
-  gdf = gdf.rename(columns={'nom': 'libelle_region'})
+ # gdf = gdf.rename(columns={'nom': 'libelle_region'})
   gdf = gdf[['libelle_region', 'geometry']]  
+  gdf['geometry'] = gdf['geometry'].apply(wkt.loads)
+  gdf= gpd.GeoDataFrame(gdf, geometry='geometry')
+
 
 
   df['date_heure'] = pd.to_datetime(df['date_heure'], errors='coerce')
