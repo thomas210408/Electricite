@@ -3,12 +3,9 @@ streamlit
 numpy 
 matplotlib
 seaborn 
-matplotlib.dates
 geopandas 
-matplotlib.colors 
-statsmodels.api
-plotly.express 
-plotly.graph_objects
-scipy.stats 
+statsmodels
+plotly
+scipy
 pickle
 prophet
