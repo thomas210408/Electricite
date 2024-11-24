@@ -537,7 +537,7 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
   st.write ("### Cartographie de la Consommation ou de la Production Électrique par Région en France")
   
 
-  gdf = gpd.read_file('regions-20180101-shp/regions-20180101.shp') 
+  gdf = gpd.read_file('regions-20180101.shp') 
 
 
   gdf = gdf.rename(columns={'nom': 'libelle_region'})
