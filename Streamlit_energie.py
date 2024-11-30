@@ -542,9 +542,9 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
 
 
  # gdf = gdf.rename(columns={'nom': 'libelle_region'})
-  gdf = gdf[['libelle_region', 'geometry']]  
-  gdf['geometry'] = gdf['geometry'].apply(wkt.loads)
-  gdf= gpd.GeoDataFrame(gdf, geometry='geometry')
+  gdf1 = gdf[['libelle_region', 'geometry']]  
+  gdf1['geometry'] = gdf1['geometry'].apply(wkt.loads)
+  gdf1= gpd.GeoDataFrame(gdf1, geometry='geometry')
 
 
 
@@ -567,21 +567,21 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
 
   if option == "Consommation électrique par région":
       consommation_par_region = df_year.groupby('libelle_region')['consommation'].sum().reset_index()
-      gdf_data = gdf.merge(consommation_par_region, how='left', on='libelle_region')
+      gdf_data = gdf1.merge(consommation_par_region, how='left', on='libelle_region')
       column = 'consommation'
       title = f"Consommation Électrique par Région en France (en MW) - {year}"
       cmap = 'RdYlGn_r'
 
   elif option == "Production électrique renouvelable par région":
       production_renouvelable_par_region = df_year.groupby('libelle_region')[['eolien', 'solaire', 'hydraulique']].sum().sum(axis=1).reset_index()
-      gdf_data = gdf.merge(production_renouvelable_par_region, how='left', on='libelle_region')
+      gdf_data = gdf1.merge(production_renouvelable_par_region, how='left', on='libelle_region')
       column = 0  
       title = f"Production Électrique Renouvelable par Région en France (en MW) - {year}"
       cmap = 'YlGn'
 
   else:
       production_non_renouvelable_par_region = df_year.groupby('libelle_region')[['nucleaire', 'thermique', 'bioenergies']].sum().sum(axis=1).reset_index()
-      gdf_data = gdf.merge(production_non_renouvelable_par_region, how='left', on='libelle_region')
+      gdf_data = gdf1.merge(production_non_renouvelable_par_region, how='left', on='libelle_region')
       column = 0 
       title = f"Production Électrique Non Renouvelable par Région en France (en MW) - {year}"
       cmap = 'OrRd'
@@ -609,8 +609,8 @@ Ces observations soulignent l'importance d'une combinaison équilibrée de sourc
   
 
 
-  df_gdf_2 = pd.read_csv('gdf_2.csv') 
-  df_gdf_2['geometry'] = df_gdf_2['geometry'].apply(wkt.loads)
+  #   = pd.read_csv('gdf_2.csv') 
+  df_gdf_2['geometry'] = df_gdf['geometry'].apply(wkt.loads)
   gdf_2 = gpd.GeoDataFrame(df_gdf_2, geometry='geometry')
 
 
