@@ -308,6 +308,7 @@ Pour approfondir notre compréhension du mix énergétique, il est essentiel de 
 
   df['date'] = pd.to_datetime(df['date'], errors='coerce')
   df_t=df.loc[df['date'].dt.year==2022]
+  df_t=df_t.loc[df_t['libelle_region']=='Auvergne-Rhône-Alpes']
   filtered_df = df_t[['consommation', selected_energy]].dropna()
 
 
