@@ -307,7 +307,7 @@ Pour approfondir notre compréhension du mix énergétique, il est essentiel de 
   selected_energy = st.selectbox("Sélectionnez le type d'énergie pour la corrélation avec la consommation :", energy_types)
 
 
-  filtered_df = df[['consommation', selected_energy]].dropna()
+  filtered_df = df_ml[['consommation', selected_energy]].dropna()
 
 
   st.write(f"### Corrélation entre la consommation et la production électrique française de {selected_energy.capitalize()}")
